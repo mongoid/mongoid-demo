@@ -1,0 +1,6 @@
+development:
+  clients:
+    default:
+      uri: mongodb+srv://username:password@cluster0-ayiee.mongodb.net/test?retryWrites=true&w=majority
+      options:
+        server_selection_timeout: 5
