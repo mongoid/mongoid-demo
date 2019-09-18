@@ -13,8 +13,17 @@
 !/log/.keep
 !/tmp/.keep
 
+
+/public/assets
+.byebug_history
+
+# Ignore master key for decrypting credentials and more.
+/config/master.key
+/config/mongoid.yml
+
+/public/packs
+/public/packs-test
 /node_modules
 /yarn-error.log
-
-.byebug_history
-mongoid.yml
+yarn-debug.log*
+.yarn-integrity
