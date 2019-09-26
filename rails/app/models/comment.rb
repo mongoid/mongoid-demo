@@ -1,8 +1,7 @@
 class Comment
   include Mongoid::Document
-  include Mongoid::Timestamps
   field :name, type: String
   field :message, type: String
 
-  belongs_to :post
+  belongs_to :post, dependent: :destroy
 end
