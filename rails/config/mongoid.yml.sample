@@ -3,15 +3,23 @@ development:
   clients:
     # Defines the default client. (required)
     default:
-      # Defines the name of the default database that Mongoid can connect to.
-      # (required).
-      database: blog_development
-      # Provides the hosts the default client can connect to. Must be an array
-      # of host:port pairs. (required)
+      # If using MongoDB Atlas, uncomment the following line and replace the
+      # sample URI with your cluster URI from the Atlas console.
+      #uri: mongodb+srv://user:pass@yourcluster.mongodb.net/blog_development?retryWrites=true&w=majority
+      
+      # If using a local MongoDB deployment, either a URI or a host list
+      # may be specified.
       hosts:
         - localhost:27017
+      # If Mongoid is configured with the host list, the name of the default
+      # database that Mongoid will connect to. (If Mongoid is configured using
+      # a URI, the default database must be specified in the URI.)
+      database: blog_development
+      
+      # Configure Ruby driver options.
+      #
+      # These may also be provided in the URI as URI options.
       options:
-        server_selection_timeout: 1
         # Note that all options listed below are Ruby driver client options (the mongo gem).
         # Please refer to the driver documentation of the version of the mongo gem you are using
         # for the most up-to-date list of options.
@@ -62,6 +70,7 @@ development:
 
         # The timeout in seconds for selecting a server for an operation. (default: 30)
         # server_selection_timeout: 30
+        server_selection_timeout: 1
 
         # The maximum number of connections in the connection pool. (default: 5)
         # max_pool_size: 5

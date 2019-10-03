@@ -1,24 +1,18 @@
-# README
+# Sample Mongoid & Rails Application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Configure
 
-Things you may want to cover:
+Copy `config/mongoid.yml.sample` to `config/mongoid.yml` and adjust the
+settings within as needed:
 
-* Ruby version
+- If you are using a MongoDB Atlas cluster, remove the hosts and database
+sections from `config/mongoid.yml`, uncomment the URI section and paste the
+URI to your cluster from the Atlas console.
+- You may want to adjust the server selection timeout, increasing it for
+a deployment used over Internet such as Atlas and decreasing it for a
+local deployment.
 
-* System dependencies
+## Run
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+To run the application, use the standard Rails commands (``rails s``,
+``rails c``).
