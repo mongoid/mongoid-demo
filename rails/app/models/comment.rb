@@ -3,5 +3,5 @@ class Comment
   field :name, type: String
   field :message, type: String
 
-  belongs_to :post, dependent: :destroy
+  belongs_to :post
 end
