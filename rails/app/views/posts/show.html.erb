@@ -11,16 +11,19 @@
 </p>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
 
 <section class="section comments">
-    <div class="container">
-        <h2 class="subtitle is-5"><strong><%= @post.comments.count %></strong> Comments</h2>
-        <%= render @post.comments %>
-        <div class="comment-form">
-            <hr />
-            <h3 class="subtitle is-3">Leave a reply</h3>
-             <%= render partial: 'comments/form', locals: { comment: @post.comments.build } %>
-        </div>
+  <div class="container">
+    <h2 class="subtitle is-5">
+      <strong><%= @post.comments.count %></strong> Comments
+    </h2>
+    <%= render @post.comments %>
+    <div class="comment-form">
+      <hr />
+      <h3 class="subtitle is-3">Leave a reply</h3>
+      <%= render partial: 'comments/form', locals: { comment: @post.comments.build } %>
     </div>
+  </div>
 </section>
+
+<%= link_to 'Back', posts_path %>
