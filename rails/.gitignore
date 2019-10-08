@@ -19,7 +19,6 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
-/config/mongoid.yml
 
 /public/packs
 /public/packs-test

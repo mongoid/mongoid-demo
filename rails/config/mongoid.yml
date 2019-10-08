@@ -3,11 +3,7 @@ development:
   clients:
     # Defines the default client. (required)
     default:
-      # Mongoid can connect to a URI accepted by the driver:
-      # uri: mongodb://user:password@mongodb.domain.com:27017/blog_development
-
-      # Otherwise define the parameters separately.
-      # This defines the name of the default database that Mongoid can connect to.
+      # Defines the name of the default database that Mongoid can connect to.
       # (required).
       database: blog_development
       # Provides the hosts the default client can connect to. Must be an array
@@ -15,6 +11,7 @@ development:
       hosts:
         - localhost:27017
       options:
+        server_selection_timeout: 1
         # Note that all options listed below are Ruby driver client options (the mongo gem).
         # Please refer to the driver documentation of the version of the mongo gem you are using
         # for the most up-to-date list of options.
@@ -77,8 +74,8 @@ development:
         # wait_queue_timeout: 5
 
         # The time to wait to establish a connection before timing out, in seconds.
-        # (default: 10)
-        # connect_timeout: 10
+        # (default: 5)
+        # connect_timeout: 5
 
         # The timeout to wait to execute operations on a socket before raising an error.
         # (default: 5)
@@ -102,15 +99,13 @@ development:
         # A passphrase for the private key.
         # ssl_key_pass_phrase: password
 
-        # Whether to do peer certification validation. (default: true)
+        # Whether or not to do peer certification validation. (default: true)
         # ssl_verify: true
 
-        # The file containing concatenated certificate authority certificates
+        # The file containing a set of concatenated certification authority certifications
         # used to validate certs passed from the other end of the connection.
         # ssl_ca_cert: /path/to/ca.cert
-        
-        # Whether to truncate long log lines. (default: true)
-        # truncate_logs: true
+
 
   # Configure Mongoid specific options. (optional)
   options:
@@ -168,3 +163,4 @@ test:
         read:
           mode: :primary
         max_pool_size: 1
+        server_selection_timeout: 1
