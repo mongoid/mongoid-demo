@@ -16,3 +16,6 @@ local deployment.
 
 To run the application, use the standard Rails commands (``rails s``,
 ``rails c``).
+
+Navigate to http://localhost:3000/posts to start creating posts and
+leaving comments.
