@@ -1,5 +1,10 @@
 # Sample Mongoid & Rails API Application
 
+This repository contains a sample Ruby on Rails API application using Mongoid.
+
+It has been developed following the
+[Mongoid getting started guide with Rails](https://docs.mongodb.com/mongoid/master/tutorials/getting-started-rails/).
+
 ## Configure
 
 Copy `config/mongoid.yml.sample` to `config/mongoid.yml` and adjust the

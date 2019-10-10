@@ -5,6 +5,9 @@ It uses Sinatra, demonstrating the use of Mongoid without Rails.
 It returns data in JSON format as would be done in a contemporary backend
 application.
 
+This application has been developed following the
+[Mongoid getting started guide with Sinatra](https://docs.mongodb.com/mongoid/master/tutorials/getting-started-sinatra/).
+
 ## Configure
 
 Copy `config/mongoid.yml.sample.atlas` or `config/mongoid.yml.sample.local`
